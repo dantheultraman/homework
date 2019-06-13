@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  smtp:
+    image: namshi/smtp
+    container_name: mailserver
+    ports:
+      - "25:25"
+  app:
+    build: .
+    container_name: event
+    ports:
+      - "5000:5000"
+    links:
+      - smtp
+    environment:
+      - notice_email=daniel.lin.821@gmail.com
+      - smtp_sender=event_organiser@gmail.com
+      - smtp_address=mailserver:25
+    depends_on:
+      - smtp
