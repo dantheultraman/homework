@@ -70,6 +70,7 @@ POST /users
 | Attributes | Example |
 | ------ | ----------------- |
 | email | daniel@gmail.com |
+
 e.g.
 ```sh
 $ curl -X POST http://0.0.0.0:5000/users -H "Content-Type: application/json" -d '{"email": "daniel@gmail.com"}'
@@ -81,6 +82,7 @@ DELETE /users
 | Attributes | Example |
 | ------ | ----------------- |
 | email | daniel@gmail.com |
+
 e.g.
 ```sh
 $ curl -X DELETE http://0.0.0.0:5000/users -H "Content-Type: application/json" -d '{"email": "daniel@gmail.com"}'
@@ -92,6 +94,7 @@ POST /events/{event_id}/subscribe
 | Attributes | Example |
 | ------ | ----------------- |
 | email | daniel@gmail.com |
+
 e.g.
 ```sh
 $ curl -X POST localhost:5000/events/1/subscribe -H "Content-Type: application/json" -d '{"email": "daniel@gmail.com"}'
@@ -103,6 +106,7 @@ POST /events/{event_id}/unsubscribe
 | Attributes | Example |
 | ------ | ----------------- |
 | email | daniel@gmail.com |
+
 e.g.
 ```sh
 $ curl -X POST localhost:5000/events/1/unsubscribe -H "Content-Type: application/json" -d '{"email": "daniel@gmail.com"}'
