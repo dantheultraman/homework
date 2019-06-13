@@ -37,12 +37,13 @@ $ curl http://0.0.0.0:5000/events/1
 
 ##### Create an event
 POST /events
-| Attributes | Format |
-| ------ | ------ |
-| name | STR |
-| location | STR |
+| Attributes  | Format |
+| ------------- | ---------------- |
+| name  | STR  |
+| location  | STR  |
 | start | %Y-%m-%d %H:%M |
 | end | %Y-%m-%d %H:%M |
+
 e.g.
 ```sh
 $ curl -X POST http://0.0.0.0:5000/events -H "Content-Type: application/json" -d '{"name": "Daniel Birthday Party", "location": "Tokyo", "start": "2019-08-21 20:00", "end": "2019-08-22 00:00"}'
@@ -65,7 +66,7 @@ $ curl http://0.0.0.0:5000/users
 ##### Create a new user
 POST /users
 | Attributes | Example |
-| ------ | ------ |
+| ------ | ----------------- |
 | email | daniel@gmail.com |
 e.g.
 ```sh
@@ -75,7 +76,7 @@ $ curl -X POST http://0.0.0.0:5000/users -H "Content-Type: application/json" -d 
 ##### Delete a user
 DELETE /users
 | Attributes | Example |
-| ------ | ------ |
+| ------ | ----------------- |
 | email | daniel@gmail.com |
 e.g.
 ```sh
